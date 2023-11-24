@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea11 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Series series11 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -41,17 +41,26 @@
             this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.CalculateToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.calculateDichtomyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.calculateGoldenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.calculateNewtonToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.calculateDecentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ClearMenuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.вВЛучшийПрезидентИПреподToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.textBox6 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(70, 100);
+            this.textBox1.Location = new System.Drawing.Point(68, 94);
             this.textBox1.Name = "textBox1";
             this.textBox1.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.textBox1.Size = new System.Drawing.Size(100, 26);
@@ -60,7 +69,7 @@
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(70, 139);
+            this.textBox2.Location = new System.Drawing.Point(68, 133);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(100, 26);
             this.textBox2.TabIndex = 1;
@@ -69,7 +78,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(44, 103);
+            this.label1.Location = new System.Drawing.Point(42, 97);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(20, 20);
             this.label1.TabIndex = 2;
@@ -78,7 +87,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(44, 142);
+            this.label2.Location = new System.Drawing.Point(42, 136);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(20, 20);
             this.label2.TabIndex = 3;
@@ -87,7 +96,7 @@
             // epsilonLabel
             // 
             this.epsilonLabel.AutoSize = true;
-            this.epsilonLabel.Location = new System.Drawing.Point(337, 103);
+            this.epsilonLabel.Location = new System.Drawing.Point(335, 97);
             this.epsilonLabel.Name = "epsilonLabel";
             this.epsilonLabel.Size = new System.Drawing.Size(180, 20);
             this.epsilonLabel.TabIndex = 8;
@@ -95,7 +104,7 @@
             // 
             // epsilonTextBox
             // 
-            this.epsilonTextBox.Location = new System.Drawing.Point(341, 126);
+            this.epsilonTextBox.Location = new System.Drawing.Point(339, 120);
             this.epsilonTextBox.Name = "epsilonTextBox";
             this.epsilonTextBox.Size = new System.Drawing.Size(176, 26);
             this.epsilonTextBox.TabIndex = 9;
@@ -104,7 +113,7 @@
             // resultLabel
             // 
             this.resultLabel.AutoSize = true;
-            this.resultLabel.Location = new System.Drawing.Point(12, 271);
+            this.resultLabel.Location = new System.Drawing.Point(10, 305);
             this.resultLabel.Name = "resultLabel";
             this.resultLabel.Size = new System.Drawing.Size(225, 20);
             this.resultLabel.TabIndex = 10;
@@ -112,28 +121,28 @@
             // 
             // solutionTextBox
             // 
-            this.solutionTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 26F);
-            this.solutionTextBox.Location = new System.Drawing.Point(243, 253);
+            this.solutionTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
+            this.solutionTextBox.Location = new System.Drawing.Point(339, 270);
             this.solutionTextBox.Name = "solutionTextBox";
-            this.solutionTextBox.Size = new System.Drawing.Size(274, 66);
+            this.solutionTextBox.Size = new System.Drawing.Size(176, 26);
             this.solutionTextBox.TabIndex = 12;
             this.solutionTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.solutionTextBox.TextChanged += new System.EventHandler(this.solutionTextBox_TextChanged);
             // 
             // chart1
             // 
-            chartArea11.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea11);
+            chartArea1.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea1);
             this.chart1.Location = new System.Drawing.Point(550, 27);
             this.chart1.Name = "chart1";
-            series11.BorderWidth = 3;
-            series11.ChartArea = "ChartArea1";
-            series11.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series11.Color = System.Drawing.Color.Red;
-            series11.LabelBorderWidth = 5;
-            series11.Name = "Series1";
-            series11.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Berry;
-            this.chart1.Series.Add(series11);
+            series1.BorderWidth = 3;
+            series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series1.Color = System.Drawing.Color.Red;
+            series1.LabelBorderWidth = 5;
+            series1.Name = "Series1";
+            series1.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Berry;
+            this.chart1.Series.Add(series1);
             this.chart1.Size = new System.Drawing.Size(679, 449);
             this.chart1.TabIndex = 13;
             this.chart1.Text = "chart1";
@@ -146,8 +155,7 @@
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.CalculateToolStripMenuItem,
-            this.ClearMenuToolStripMenuItem,
-            this.вВЛучшийПрезидентИПреподToolStripMenuItem});
+            this.ClearMenuToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(1241, 33);
@@ -156,10 +164,43 @@
             // 
             // CalculateToolStripMenuItem
             // 
+            this.CalculateToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.calculateDichtomyToolStripMenuItem,
+            this.calculateGoldenToolStripMenuItem,
+            this.calculateNewtonToolStripMenuItem,
+            this.calculateDecentToolStripMenuItem});
             this.CalculateToolStripMenuItem.Name = "CalculateToolStripMenuItem";
             this.CalculateToolStripMenuItem.Size = new System.Drawing.Size(98, 29);
             this.CalculateToolStripMenuItem.Text = "Calculate";
             this.CalculateToolStripMenuItem.Click += new System.EventHandler(this.расчитатьToolStripMenuItem_Click);
+            // 
+            // calculateDichtomyToolStripMenuItem
+            // 
+            this.calculateDichtomyToolStripMenuItem.Name = "calculateDichtomyToolStripMenuItem";
+            this.calculateDichtomyToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.calculateDichtomyToolStripMenuItem.Text = "Calculate Dichtomy";
+            this.calculateDichtomyToolStripMenuItem.Click += new System.EventHandler(this.calculateDichtomyToolStripMenuItem_Click);
+            // 
+            // calculateGoldenToolStripMenuItem
+            // 
+            this.calculateGoldenToolStripMenuItem.Name = "calculateGoldenToolStripMenuItem";
+            this.calculateGoldenToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.calculateGoldenToolStripMenuItem.Text = "Calculate Golden";
+            this.calculateGoldenToolStripMenuItem.Click += new System.EventHandler(this.calculateGoldenToolStripMenuItem_Click);
+            // 
+            // calculateNewtonToolStripMenuItem
+            // 
+            this.calculateNewtonToolStripMenuItem.Name = "calculateNewtonToolStripMenuItem";
+            this.calculateNewtonToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.calculateNewtonToolStripMenuItem.Text = "Calculate Newton";
+            this.calculateNewtonToolStripMenuItem.Click += new System.EventHandler(this.calculateNewtonToolStripMenuItem_Click);
+            // 
+            // calculateDecentToolStripMenuItem
+            // 
+            this.calculateDecentToolStripMenuItem.Name = "calculateDecentToolStripMenuItem";
+            this.calculateDecentToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.calculateDecentToolStripMenuItem.Text = "Calculate Decent";
+            this.calculateDecentToolStripMenuItem.Click += new System.EventHandler(this.calculateDecentToolStripMenuItem_Click);
             // 
             // ClearMenuToolStripMenuItem
             // 
@@ -168,16 +209,9 @@
             this.ClearMenuToolStripMenuItem.Text = "Clear Menu";
             this.ClearMenuToolStripMenuItem.Click += new System.EventHandler(this.ClearMenuToolStripMenuItem_Click);
             // 
-            // вВЛучшийПрезидентИПреподToolStripMenuItem
-            // 
-            this.вВЛучшийПрезидентИПреподToolStripMenuItem.Name = "вВЛучшийПрезидентИПреподToolStripMenuItem";
-            this.вВЛучшийПрезидентИПреподToolStripMenuItem.Size = new System.Drawing.Size(292, 29);
-            this.вВЛучшийПрезидентИПреподToolStripMenuItem.Text = "В.В Лучший президент и препод";
-            this.вВЛучшийПрезидентИПреподToolStripMenuItem.Click += new System.EventHandler(this.вВЛучшийПрезидентИПреподToolStripMenuItem_Click);
-            // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(341, 325);
+            this.textBox3.Location = new System.Drawing.Point(339, 302);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(176, 26);
             this.textBox3.TabIndex = 15;
@@ -187,17 +221,77 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(1, 328);
+            this.label3.Location = new System.Drawing.Point(10, 276);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(316, 20);
             this.label3.TabIndex = 16;
             this.label3.Text = "Значение функции в точке пересечения";
+            // 
+            // textBox4
+            // 
+            this.textBox4.Location = new System.Drawing.Point(205, 190);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.textBox4.Size = new System.Drawing.Size(310, 26);
+            this.textBox4.TabIndex = 17;
+            this.textBox4.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(12, 196);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(149, 20);
+            this.label5.TabIndex = 19;
+            this.label5.Text = "Введите функцию";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(10, 351);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(148, 20);
+            this.label4.TabIndex = 20;
+            this.label4.Text = "Минимум функции";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(10, 383);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(155, 20);
+            this.label6.TabIndex = 21;
+            this.label6.Text = "Максимум функции";
+            // 
+            // textBox5
+            // 
+            this.textBox5.Location = new System.Drawing.Point(339, 351);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(176, 26);
+            this.textBox5.TabIndex = 22;
+            this.textBox5.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.textBox5.TextChanged += new System.EventHandler(this.textBox5_TextChanged);
+            // 
+            // textBox6
+            // 
+            this.textBox6.Location = new System.Drawing.Point(339, 383);
+            this.textBox6.Name = "textBox6";
+            this.textBox6.Size = new System.Drawing.Size(176, 26);
+            this.textBox6.TabIndex = 23;
+            this.textBox6.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.textBox6.TextChanged += new System.EventHandler(this.textBox6_TextChanged);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1241, 502);
+            this.Controls.Add(this.textBox6);
+            this.Controls.Add(this.textBox5);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.textBox4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.chart1);
@@ -235,9 +329,18 @@
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem CalculateToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ClearMenuToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem вВЛучшийПрезидентИПреподToolStripMenuItem;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.ToolStripMenuItem calculateDichtomyToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem calculateNewtonToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem calculateDecentToolStripMenuItem;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.ToolStripMenuItem calculateGoldenToolStripMenuItem;
     }
 }
 
