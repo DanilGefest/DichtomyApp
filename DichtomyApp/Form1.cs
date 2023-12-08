@@ -305,6 +305,7 @@ namespace DichtomyApp
 
             textBox5.Text = result.ToString();
         }
+
         private void CoordinateDescentNegative()
         {
             double x = (a + b) / 2;
@@ -504,6 +505,18 @@ namespace DichtomyApp
                     CoordinateDescentNegative();
                 }
             }
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void integralToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+      Integral newForm = new Integral(this);
+      this.Hide();
+      newForm.Show();
         }
 
         private void epsilonTextBox_TextChanged(object sender, EventArgs e)

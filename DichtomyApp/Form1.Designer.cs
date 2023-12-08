@@ -30,6 +30,7 @@
         {
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -46,6 +47,8 @@
             this.calculateNewtonToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.calculateDecentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ClearMenuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.otherTasksToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.integralToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.textBox4 = new System.Windows.Forms.TextBox();
@@ -96,7 +99,7 @@
             // epsilonLabel
             // 
             this.epsilonLabel.AutoSize = true;
-            this.epsilonLabel.Location = new System.Drawing.Point(335, 97);
+            this.epsilonLabel.Location = new System.Drawing.Point(201, 94);
             this.epsilonLabel.Name = "epsilonLabel";
             this.epsilonLabel.Size = new System.Drawing.Size(180, 20);
             this.epsilonLabel.TabIndex = 8;
@@ -104,7 +107,7 @@
             // 
             // epsilonTextBox
             // 
-            this.epsilonTextBox.Location = new System.Drawing.Point(339, 120);
+            this.epsilonTextBox.Location = new System.Drawing.Point(205, 120);
             this.epsilonTextBox.Name = "epsilonTextBox";
             this.epsilonTextBox.Size = new System.Drawing.Size(176, 26);
             this.epsilonTextBox.TabIndex = 9;
@@ -155,10 +158,11 @@
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.CalculateToolStripMenuItem,
-            this.ClearMenuToolStripMenuItem});
+            this.ClearMenuToolStripMenuItem,
+            this.otherTasksToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1241, 33);
+            this.menuStrip1.Size = new System.Drawing.Size(1241, 36);
             this.menuStrip1.TabIndex = 14;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -170,44 +174,59 @@
             this.calculateNewtonToolStripMenuItem,
             this.calculateDecentToolStripMenuItem});
             this.CalculateToolStripMenuItem.Name = "CalculateToolStripMenuItem";
-            this.CalculateToolStripMenuItem.Size = new System.Drawing.Size(98, 29);
+            this.CalculateToolStripMenuItem.Size = new System.Drawing.Size(98, 32);
             this.CalculateToolStripMenuItem.Text = "Calculate";
             this.CalculateToolStripMenuItem.Click += new System.EventHandler(this.расчитатьToolStripMenuItem_Click);
             // 
             // calculateDichtomyToolStripMenuItem
             // 
             this.calculateDichtomyToolStripMenuItem.Name = "calculateDichtomyToolStripMenuItem";
-            this.calculateDichtomyToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.calculateDichtomyToolStripMenuItem.Size = new System.Drawing.Size(266, 34);
             this.calculateDichtomyToolStripMenuItem.Text = "Calculate Dichtomy";
             this.calculateDichtomyToolStripMenuItem.Click += new System.EventHandler(this.calculateDichtomyToolStripMenuItem_Click);
             // 
             // calculateGoldenToolStripMenuItem
             // 
             this.calculateGoldenToolStripMenuItem.Name = "calculateGoldenToolStripMenuItem";
-            this.calculateGoldenToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.calculateGoldenToolStripMenuItem.Size = new System.Drawing.Size(266, 34);
             this.calculateGoldenToolStripMenuItem.Text = "Calculate Golden";
             this.calculateGoldenToolStripMenuItem.Click += new System.EventHandler(this.calculateGoldenToolStripMenuItem_Click);
             // 
             // calculateNewtonToolStripMenuItem
             // 
             this.calculateNewtonToolStripMenuItem.Name = "calculateNewtonToolStripMenuItem";
-            this.calculateNewtonToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.calculateNewtonToolStripMenuItem.Size = new System.Drawing.Size(266, 34);
             this.calculateNewtonToolStripMenuItem.Text = "Calculate Newton";
             this.calculateNewtonToolStripMenuItem.Click += new System.EventHandler(this.calculateNewtonToolStripMenuItem_Click);
             // 
             // calculateDecentToolStripMenuItem
             // 
             this.calculateDecentToolStripMenuItem.Name = "calculateDecentToolStripMenuItem";
-            this.calculateDecentToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.calculateDecentToolStripMenuItem.Size = new System.Drawing.Size(266, 34);
             this.calculateDecentToolStripMenuItem.Text = "Calculate Decent";
             this.calculateDecentToolStripMenuItem.Click += new System.EventHandler(this.calculateDecentToolStripMenuItem_Click);
             // 
             // ClearMenuToolStripMenuItem
             // 
             this.ClearMenuToolStripMenuItem.Name = "ClearMenuToolStripMenuItem";
-            this.ClearMenuToolStripMenuItem.Size = new System.Drawing.Size(117, 29);
+            this.ClearMenuToolStripMenuItem.Size = new System.Drawing.Size(117, 32);
             this.ClearMenuToolStripMenuItem.Text = "Clear Menu";
             this.ClearMenuToolStripMenuItem.Click += new System.EventHandler(this.ClearMenuToolStripMenuItem_Click);
+            // 
+            // otherTasksToolStripMenuItem
+            // 
+            this.otherTasksToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.integralToolStripMenuItem});
+            this.otherTasksToolStripMenuItem.Name = "otherTasksToolStripMenuItem";
+            this.otherTasksToolStripMenuItem.Size = new System.Drawing.Size(118, 32);
+            this.otherTasksToolStripMenuItem.Text = "Other tasks";
+            // 
+            // integralToolStripMenuItem
+            // 
+            this.integralToolStripMenuItem.Name = "integralToolStripMenuItem";
+            this.integralToolStripMenuItem.Size = new System.Drawing.Size(174, 34);
+            this.integralToolStripMenuItem.Text = "Integral";
+            this.integralToolStripMenuItem.Click += new System.EventHandler(this.integralToolStripMenuItem_Click);
             // 
             // textBox3
             // 
@@ -285,6 +304,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(1241, 502);
             this.Controls.Add(this.textBox6);
             this.Controls.Add(this.textBox5);
@@ -304,9 +324,11 @@
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.menuStrip1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
-            this.Text = "Dichtomy";
+            this.Text = "AllInOne";
+            this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
@@ -341,6 +363,8 @@
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.ToolStripMenuItem calculateGoldenToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem otherTasksToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem integralToolStripMenuItem;
     }
 }
 

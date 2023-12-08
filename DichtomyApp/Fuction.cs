@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
+
 using org.mariuszgromada.math.mxparser;
 
 namespace DichtomyApp
