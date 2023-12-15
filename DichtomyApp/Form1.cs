@@ -519,6 +519,18 @@ namespace DichtomyApp
       newForm.Show();
         }
 
+        private void otherTasksToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void sLAEToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            SLAE newForm1 = new SLAE(this);
+            this.Hide();
+            newForm1.Show();
+        }
+
         private void epsilonTextBox_TextChanged(object sender, EventArgs e)
         {
 

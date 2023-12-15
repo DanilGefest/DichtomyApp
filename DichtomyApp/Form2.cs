@@ -23,6 +23,7 @@ namespace DichtomyApp
             InitializeComponent();
             MainForm = Form;
         }
+     
 
         private void Visualisation()
         {
@@ -277,6 +278,21 @@ namespace DichtomyApp
 
       SecondTask();
     }
+
+        private void otherTasksToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void sLAEToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void rectangleCheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
 
         private void trapeseResult_TextChanged(object sender, EventArgs e)
         {

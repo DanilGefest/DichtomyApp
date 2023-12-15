@@ -87,7 +87,7 @@
             // upperIntegral
             // 
             this.upperIntegral.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.upperIntegral.Location = new System.Drawing.Point(7, 20);
+            this.upperIntegral.Location = new System.Drawing.Point(8, 20);
             this.upperIntegral.Name = "upperIntegral";
             this.upperIntegral.Size = new System.Drawing.Size(84, 30);
             this.upperIntegral.TabIndex = 3;
@@ -107,9 +107,9 @@
             // formulaIntegral
             // 
             this.formulaIntegral.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.formulaIntegral.Location = new System.Drawing.Point(79, 112);
+            this.formulaIntegral.Location = new System.Drawing.Point(80, 112);
             this.formulaIntegral.Name = "formulaIntegral";
-            this.formulaIntegral.Size = new System.Drawing.Size(413, 35);
+            this.formulaIntegral.Size = new System.Drawing.Size(414, 35);
             this.formulaIntegral.TabIndex = 5;
             this.formulaIntegral.Text = "x^2+5";
             this.formulaIntegral.TextChanged += new System.EventHandler(this.formulaIntegral_TextChanged);
@@ -165,6 +165,7 @@
             this.otherTasksToolStripMenuItem.Name = "otherTasksToolStripMenuItem";
             this.otherTasksToolStripMenuItem.Size = new System.Drawing.Size(118, 29);
             this.otherTasksToolStripMenuItem.Text = "Other tasks";
+            this.otherTasksToolStripMenuItem.Click += new System.EventHandler(this.otherTasksToolStripMenuItem_Click);
             // 
             // mathFunctionsToolStripMenuItem
             // 
@@ -177,14 +178,14 @@
             // 
             this.countOfSteps.Location = new System.Drawing.Point(44, 91);
             this.countOfSteps.Name = "countOfSteps";
-            this.countOfSteps.Size = new System.Drawing.Size(197, 26);
+            this.countOfSteps.Size = new System.Drawing.Size(198, 26);
             this.countOfSteps.TabIndex = 7;
             this.countOfSteps.Text = "50";
             this.countOfSteps.TextChanged += new System.EventHandler(this.countOfSteps_TextChanged);
             // 
             // epsilonTextBox
             // 
-            this.epsilonTextBox.Location = new System.Drawing.Point(44, 167);
+            this.epsilonTextBox.Location = new System.Drawing.Point(44, 168);
             this.epsilonTextBox.Name = "epsilonTextBox";
             this.epsilonTextBox.Size = new System.Drawing.Size(198, 26);
             this.epsilonTextBox.TabIndex = 8;
@@ -204,7 +205,7 @@
             // Точность
             // 
             this.Точность.AutoSize = true;
-            this.Точность.Location = new System.Drawing.Point(80, 144);
+            this.Точность.Location = new System.Drawing.Point(80, 145);
             this.Точность.Name = "Точность";
             this.Точность.Size = new System.Drawing.Size(80, 20);
             this.Точность.TabIndex = 11;
@@ -216,7 +217,7 @@
             chartArea1.Name = "ChartArea1";
             this.chart1.ChartAreas.Add(chartArea1);
             this.chart1.DataSource = this.chart1.Series;
-            this.chart1.Location = new System.Drawing.Point(545, 20);
+            this.chart1.Location = new System.Drawing.Point(544, 20);
             this.chart1.Name = "chart1";
             this.chart1.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Bright;
             series1.ChartArea = "ChartArea1";
@@ -231,7 +232,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(9, 73);
+            this.label4.Location = new System.Drawing.Point(9, 72);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(197, 20);
             this.label4.TabIndex = 13;
@@ -259,7 +260,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label7.Location = new System.Drawing.Point(128, 21);
+            this.label7.Location = new System.Drawing.Point(128, 22);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(187, 36);
             this.label7.TabIndex = 16;
@@ -267,7 +268,7 @@
             // 
             // rectangleResult
             // 
-            this.rectangleResult.Location = new System.Drawing.Point(233, 73);
+            this.rectangleResult.Location = new System.Drawing.Point(232, 72);
             this.rectangleResult.Name = "rectangleResult";
             this.rectangleResult.Size = new System.Drawing.Size(202, 26);
             this.rectangleResult.TabIndex = 17;
@@ -275,7 +276,7 @@
             // 
             // trapeseResult
             // 
-            this.trapeseResult.Location = new System.Drawing.Point(233, 115);
+            this.trapeseResult.Location = new System.Drawing.Point(232, 115);
             this.trapeseResult.Name = "trapeseResult";
             this.trapeseResult.Size = new System.Drawing.Size(202, 26);
             this.trapeseResult.TabIndex = 18;
@@ -283,7 +284,7 @@
             // 
             // simpsonResult
             // 
-            this.simpsonResult.Location = new System.Drawing.Point(233, 158);
+            this.simpsonResult.Location = new System.Drawing.Point(232, 158);
             this.simpsonResult.Name = "simpsonResult";
             this.simpsonResult.Size = new System.Drawing.Size(202, 26);
             this.simpsonResult.TabIndex = 19;
@@ -298,7 +299,7 @@
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.label4);
-            this.panel1.Location = new System.Drawing.Point(18, 527);
+            this.panel1.Location = new System.Drawing.Point(18, 528);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(498, 222);
             this.panel1.TabIndex = 20;
@@ -319,19 +320,20 @@
             this.rectangleCheckBox.AutoSize = true;
             this.rectangleCheckBox.Checked = true;
             this.rectangleCheckBox.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.rectangleCheckBox.Location = new System.Drawing.Point(277, 79);
+            this.rectangleCheckBox.Location = new System.Drawing.Point(278, 78);
             this.rectangleCheckBox.Name = "rectangleCheckBox";
             this.rectangleCheckBox.Size = new System.Drawing.Size(223, 24);
             this.rectangleCheckBox.TabIndex = 22;
             this.rectangleCheckBox.Text = "Метод прямоугольников";
             this.rectangleCheckBox.UseVisualStyleBackColor = true;
+            this.rectangleCheckBox.CheckedChanged += new System.EventHandler(this.rectangleCheckBox_CheckedChanged);
             // 
             // trapeseCheckBox
             // 
             this.trapeseCheckBox.AutoSize = true;
             this.trapeseCheckBox.Checked = true;
             this.trapeseCheckBox.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.trapeseCheckBox.Location = new System.Drawing.Point(277, 128);
+            this.trapeseCheckBox.Location = new System.Drawing.Point(278, 128);
             this.trapeseCheckBox.Name = "trapeseCheckBox";
             this.trapeseCheckBox.Size = new System.Drawing.Size(162, 24);
             this.trapeseCheckBox.TabIndex = 23;
@@ -343,7 +345,7 @@
             this.simpsonCheckBox.AutoSize = true;
             this.simpsonCheckBox.Checked = true;
             this.simpsonCheckBox.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.simpsonCheckBox.Location = new System.Drawing.Point(277, 176);
+            this.simpsonCheckBox.Location = new System.Drawing.Point(278, 175);
             this.simpsonCheckBox.Name = "simpsonCheckBox";
             this.simpsonCheckBox.Size = new System.Drawing.Size(165, 24);
             this.simpsonCheckBox.TabIndex = 24;
@@ -354,7 +356,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label3.Location = new System.Drawing.Point(281, 835);
+            this.label3.Location = new System.Drawing.Point(280, 835);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(720, 69);
             this.label3.TabIndex = 25;

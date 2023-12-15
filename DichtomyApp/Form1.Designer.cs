@@ -49,6 +49,7 @@
             this.ClearMenuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.otherTasksToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.integralToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.sLAEToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.textBox4 = new System.Windows.Forms.TextBox();
@@ -57,13 +58,21 @@
             this.label6 = new System.Windows.Forms.Label();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.textBox6 = new System.Windows.Forms.TextBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             this.menuStrip1.SuspendLayout();
+            this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
+            this.panel3.SuspendLayout();
+            this.panel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(68, 94);
+            this.textBox1.Location = new System.Drawing.Point(40, 19);
             this.textBox1.Name = "textBox1";
             this.textBox1.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.textBox1.Size = new System.Drawing.Size(100, 26);
@@ -72,7 +81,7 @@
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(68, 133);
+            this.textBox2.Location = new System.Drawing.Point(40, 57);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(100, 26);
             this.textBox2.TabIndex = 1;
@@ -81,7 +90,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(42, 97);
+            this.label1.Location = new System.Drawing.Point(14, 22);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(20, 20);
             this.label1.TabIndex = 2;
@@ -90,7 +99,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(42, 136);
+            this.label2.Location = new System.Drawing.Point(14, 60);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(20, 20);
             this.label2.TabIndex = 3;
@@ -99,7 +108,7 @@
             // epsilonLabel
             // 
             this.epsilonLabel.AutoSize = true;
-            this.epsilonLabel.Location = new System.Drawing.Point(201, 94);
+            this.epsilonLabel.Location = new System.Drawing.Point(173, 19);
             this.epsilonLabel.Name = "epsilonLabel";
             this.epsilonLabel.Size = new System.Drawing.Size(180, 20);
             this.epsilonLabel.TabIndex = 8;
@@ -107,7 +116,7 @@
             // 
             // epsilonTextBox
             // 
-            this.epsilonTextBox.Location = new System.Drawing.Point(205, 120);
+            this.epsilonTextBox.Location = new System.Drawing.Point(178, 45);
             this.epsilonTextBox.Name = "epsilonTextBox";
             this.epsilonTextBox.Size = new System.Drawing.Size(176, 26);
             this.epsilonTextBox.TabIndex = 9;
@@ -116,7 +125,7 @@
             // resultLabel
             // 
             this.resultLabel.AutoSize = true;
-            this.resultLabel.Location = new System.Drawing.Point(10, 305);
+            this.resultLabel.Location = new System.Drawing.Point(5, 44);
             this.resultLabel.Name = "resultLabel";
             this.resultLabel.Size = new System.Drawing.Size(225, 20);
             this.resultLabel.TabIndex = 10;
@@ -125,7 +134,7 @@
             // solutionTextBox
             // 
             this.solutionTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
-            this.solutionTextBox.Location = new System.Drawing.Point(339, 270);
+            this.solutionTextBox.Location = new System.Drawing.Point(334, 10);
             this.solutionTextBox.Name = "solutionTextBox";
             this.solutionTextBox.Size = new System.Drawing.Size(176, 26);
             this.solutionTextBox.TabIndex = 12;
@@ -136,7 +145,7 @@
             // 
             chartArea1.Name = "ChartArea1";
             this.chart1.ChartAreas.Add(chartArea1);
-            this.chart1.Location = new System.Drawing.Point(550, 27);
+            this.chart1.Location = new System.Drawing.Point(550, 28);
             this.chart1.Name = "chart1";
             series1.BorderWidth = 3;
             series1.ChartArea = "ChartArea1";
@@ -146,7 +155,7 @@
             series1.Name = "Series1";
             series1.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Berry;
             this.chart1.Series.Add(series1);
-            this.chart1.Size = new System.Drawing.Size(679, 449);
+            this.chart1.Size = new System.Drawing.Size(680, 449);
             this.chart1.TabIndex = 13;
             this.chart1.Text = "chart1";
             this.chart1.UseWaitCursor = true;
@@ -162,7 +171,7 @@
             this.otherTasksToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1241, 36);
+            this.menuStrip1.Size = new System.Drawing.Size(1240, 33);
             this.menuStrip1.TabIndex = 14;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -174,7 +183,7 @@
             this.calculateNewtonToolStripMenuItem,
             this.calculateDecentToolStripMenuItem});
             this.CalculateToolStripMenuItem.Name = "CalculateToolStripMenuItem";
-            this.CalculateToolStripMenuItem.Size = new System.Drawing.Size(98, 32);
+            this.CalculateToolStripMenuItem.Size = new System.Drawing.Size(98, 29);
             this.CalculateToolStripMenuItem.Text = "Calculate";
             this.CalculateToolStripMenuItem.Click += new System.EventHandler(this.расчитатьToolStripMenuItem_Click);
             // 
@@ -209,28 +218,37 @@
             // ClearMenuToolStripMenuItem
             // 
             this.ClearMenuToolStripMenuItem.Name = "ClearMenuToolStripMenuItem";
-            this.ClearMenuToolStripMenuItem.Size = new System.Drawing.Size(117, 32);
+            this.ClearMenuToolStripMenuItem.Size = new System.Drawing.Size(117, 29);
             this.ClearMenuToolStripMenuItem.Text = "Clear Menu";
             this.ClearMenuToolStripMenuItem.Click += new System.EventHandler(this.ClearMenuToolStripMenuItem_Click);
             // 
             // otherTasksToolStripMenuItem
             // 
             this.otherTasksToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.integralToolStripMenuItem});
+            this.integralToolStripMenuItem,
+            this.sLAEToolStripMenuItem});
             this.otherTasksToolStripMenuItem.Name = "otherTasksToolStripMenuItem";
-            this.otherTasksToolStripMenuItem.Size = new System.Drawing.Size(118, 32);
+            this.otherTasksToolStripMenuItem.Size = new System.Drawing.Size(118, 29);
             this.otherTasksToolStripMenuItem.Text = "Other tasks";
+            this.otherTasksToolStripMenuItem.Click += new System.EventHandler(this.otherTasksToolStripMenuItem_Click);
             // 
             // integralToolStripMenuItem
             // 
             this.integralToolStripMenuItem.Name = "integralToolStripMenuItem";
-            this.integralToolStripMenuItem.Size = new System.Drawing.Size(174, 34);
+            this.integralToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
             this.integralToolStripMenuItem.Text = "Integral";
             this.integralToolStripMenuItem.Click += new System.EventHandler(this.integralToolStripMenuItem_Click);
             // 
+            // sLAEToolStripMenuItem
+            // 
+            this.sLAEToolStripMenuItem.Name = "sLAEToolStripMenuItem";
+            this.sLAEToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.sLAEToolStripMenuItem.Text = "SLAE";
+            this.sLAEToolStripMenuItem.Click += new System.EventHandler(this.sLAEToolStripMenuItem_Click);
+            // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(339, 302);
+            this.textBox3.Location = new System.Drawing.Point(334, 41);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(176, 26);
             this.textBox3.TabIndex = 15;
@@ -240,7 +258,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(10, 276);
+            this.label3.Location = new System.Drawing.Point(5, 14);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(316, 20);
             this.label3.TabIndex = 16;
@@ -248,7 +266,7 @@
             // 
             // textBox4
             // 
-            this.textBox4.Location = new System.Drawing.Point(205, 190);
+            this.textBox4.Location = new System.Drawing.Point(196, 7);
             this.textBox4.Name = "textBox4";
             this.textBox4.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.textBox4.Size = new System.Drawing.Size(310, 26);
@@ -258,7 +276,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(12, 196);
+            this.label5.Location = new System.Drawing.Point(2, 13);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(149, 20);
             this.label5.TabIndex = 19;
@@ -267,7 +285,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(10, 351);
+            this.label4.Location = new System.Drawing.Point(5, 10);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(148, 20);
             this.label4.TabIndex = 20;
@@ -276,7 +294,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(10, 383);
+            this.label6.Location = new System.Drawing.Point(5, 42);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(155, 20);
             this.label6.TabIndex = 21;
@@ -284,7 +302,7 @@
             // 
             // textBox5
             // 
-            this.textBox5.Location = new System.Drawing.Point(339, 351);
+            this.textBox5.Location = new System.Drawing.Point(334, 10);
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(176, 26);
             this.textBox5.TabIndex = 22;
@@ -293,36 +311,68 @@
             // 
             // textBox6
             // 
-            this.textBox6.Location = new System.Drawing.Point(339, 383);
+            this.textBox6.Location = new System.Drawing.Point(334, 42);
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(176, 26);
             this.textBox6.TabIndex = 23;
             this.textBox6.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.textBox6.TextChanged += new System.EventHandler(this.textBox6_TextChanged);
             // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.epsilonTextBox);
+            this.panel1.Controls.Add(this.epsilonLabel);
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.textBox2);
+            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Location = new System.Drawing.Point(28, 75);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(372, 97);
+            this.panel1.TabIndex = 24;
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.label5);
+            this.panel2.Controls.Add(this.textBox4);
+            this.panel2.Location = new System.Drawing.Point(10, 182);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(517, 45);
+            this.panel2.TabIndex = 25;
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.label3);
+            this.panel3.Controls.Add(this.textBox3);
+            this.panel3.Controls.Add(this.solutionTextBox);
+            this.panel3.Controls.Add(this.resultLabel);
+            this.panel3.Location = new System.Drawing.Point(5, 261);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(521, 79);
+            this.panel3.TabIndex = 26;
+            // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.textBox6);
+            this.panel4.Controls.Add(this.textBox5);
+            this.panel4.Controls.Add(this.label6);
+            this.panel4.Controls.Add(this.label4);
+            this.panel4.Location = new System.Drawing.Point(5, 341);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(522, 81);
+            this.panel4.TabIndex = 27;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(1241, 502);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox3);
+            this.ClientSize = new System.Drawing.Size(1240, 502);
+            this.Controls.Add(this.panel4);
+            this.Controls.Add(this.panel3);
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.chart1);
-            this.Controls.Add(this.solutionTextBox);
-            this.Controls.Add(this.resultLabel);
-            this.Controls.Add(this.epsilonTextBox);
-            this.Controls.Add(this.epsilonLabel);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.menuStrip1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
@@ -332,6 +382,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -365,6 +423,11 @@
         private System.Windows.Forms.ToolStripMenuItem calculateGoldenToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem otherTasksToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem integralToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem sLAEToolStripMenuItem;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel panel4;
     }
 }
 
