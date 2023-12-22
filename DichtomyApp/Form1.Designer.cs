@@ -38,7 +38,7 @@
             this.epsilonLabel = new System.Windows.Forms.Label();
             this.epsilonTextBox = new System.Windows.Forms.TextBox();
             this.resultLabel = new System.Windows.Forms.Label();
-            this.solutionTextBox = new System.Windows.Forms.TextBox();
+            this.functionTextBox = new System.Windows.Forms.TextBox();
             this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.CalculateToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -50,18 +50,19 @@
             this.otherTasksToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.integralToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sLAEToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.IntersectionPoint = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.minFunction = new System.Windows.Forms.TextBox();
+            this.maxFunction = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.lSMToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -131,15 +132,15 @@
             this.resultLabel.TabIndex = 10;
             this.resultLabel.Text = "Точка пересечения функции";
             // 
-            // solutionTextBox
+            // functionTextBox
             // 
-            this.solutionTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
-            this.solutionTextBox.Location = new System.Drawing.Point(334, 10);
-            this.solutionTextBox.Name = "solutionTextBox";
-            this.solutionTextBox.Size = new System.Drawing.Size(176, 26);
-            this.solutionTextBox.TabIndex = 12;
-            this.solutionTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.solutionTextBox.TextChanged += new System.EventHandler(this.solutionTextBox_TextChanged);
+            this.functionTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
+            this.functionTextBox.Location = new System.Drawing.Point(334, 10);
+            this.functionTextBox.Name = "functionTextBox";
+            this.functionTextBox.Size = new System.Drawing.Size(176, 26);
+            this.functionTextBox.TabIndex = 12;
+            this.functionTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.functionTextBox.TextChanged += new System.EventHandler(this.solutionTextBox_TextChanged);
             // 
             // chart1
             // 
@@ -190,28 +191,28 @@
             // calculateDichtomyToolStripMenuItem
             // 
             this.calculateDichtomyToolStripMenuItem.Name = "calculateDichtomyToolStripMenuItem";
-            this.calculateDichtomyToolStripMenuItem.Size = new System.Drawing.Size(266, 34);
+            this.calculateDichtomyToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
             this.calculateDichtomyToolStripMenuItem.Text = "Calculate Dichtomy";
             this.calculateDichtomyToolStripMenuItem.Click += new System.EventHandler(this.calculateDichtomyToolStripMenuItem_Click);
             // 
             // calculateGoldenToolStripMenuItem
             // 
             this.calculateGoldenToolStripMenuItem.Name = "calculateGoldenToolStripMenuItem";
-            this.calculateGoldenToolStripMenuItem.Size = new System.Drawing.Size(266, 34);
+            this.calculateGoldenToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
             this.calculateGoldenToolStripMenuItem.Text = "Calculate Golden";
             this.calculateGoldenToolStripMenuItem.Click += new System.EventHandler(this.calculateGoldenToolStripMenuItem_Click);
             // 
             // calculateNewtonToolStripMenuItem
             // 
             this.calculateNewtonToolStripMenuItem.Name = "calculateNewtonToolStripMenuItem";
-            this.calculateNewtonToolStripMenuItem.Size = new System.Drawing.Size(266, 34);
+            this.calculateNewtonToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
             this.calculateNewtonToolStripMenuItem.Text = "Calculate Newton";
             this.calculateNewtonToolStripMenuItem.Click += new System.EventHandler(this.calculateNewtonToolStripMenuItem_Click);
             // 
             // calculateDecentToolStripMenuItem
             // 
             this.calculateDecentToolStripMenuItem.Name = "calculateDecentToolStripMenuItem";
-            this.calculateDecentToolStripMenuItem.Size = new System.Drawing.Size(266, 34);
+            this.calculateDecentToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
             this.calculateDecentToolStripMenuItem.Text = "Calculate Decent";
             this.calculateDecentToolStripMenuItem.Click += new System.EventHandler(this.calculateDecentToolStripMenuItem_Click);
             // 
@@ -226,7 +227,8 @@
             // 
             this.otherTasksToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.integralToolStripMenuItem,
-            this.sLAEToolStripMenuItem});
+            this.sLAEToolStripMenuItem,
+            this.lSMToolStripMenuItem});
             this.otherTasksToolStripMenuItem.Name = "otherTasksToolStripMenuItem";
             this.otherTasksToolStripMenuItem.Size = new System.Drawing.Size(118, 29);
             this.otherTasksToolStripMenuItem.Text = "Other tasks";
@@ -246,14 +248,14 @@
             this.sLAEToolStripMenuItem.Text = "SLAE";
             this.sLAEToolStripMenuItem.Click += new System.EventHandler(this.sLAEToolStripMenuItem_Click);
             // 
-            // textBox3
+            // IntersectionPoint
             // 
-            this.textBox3.Location = new System.Drawing.Point(334, 41);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(176, 26);
-            this.textBox3.TabIndex = 15;
-            this.textBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.textBox3.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
+            this.IntersectionPoint.Location = new System.Drawing.Point(334, 41);
+            this.IntersectionPoint.Name = "IntersectionPoint";
+            this.IntersectionPoint.Size = new System.Drawing.Size(176, 26);
+            this.IntersectionPoint.TabIndex = 15;
+            this.IntersectionPoint.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.IntersectionPoint.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             // 
             // label3
             // 
@@ -300,23 +302,23 @@
             this.label6.TabIndex = 21;
             this.label6.Text = "Максимум функции";
             // 
-            // textBox5
+            // minFunction
             // 
-            this.textBox5.Location = new System.Drawing.Point(334, 10);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(176, 26);
-            this.textBox5.TabIndex = 22;
-            this.textBox5.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.textBox5.TextChanged += new System.EventHandler(this.textBox5_TextChanged);
+            this.minFunction.Location = new System.Drawing.Point(334, 10);
+            this.minFunction.Name = "minFunction";
+            this.minFunction.Size = new System.Drawing.Size(176, 26);
+            this.minFunction.TabIndex = 22;
+            this.minFunction.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.minFunction.TextChanged += new System.EventHandler(this.textBox5_TextChanged);
             // 
-            // textBox6
+            // maxFunction
             // 
-            this.textBox6.Location = new System.Drawing.Point(334, 42);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(176, 26);
-            this.textBox6.TabIndex = 23;
-            this.textBox6.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.textBox6.TextChanged += new System.EventHandler(this.textBox6_TextChanged);
+            this.maxFunction.Location = new System.Drawing.Point(334, 42);
+            this.maxFunction.Name = "maxFunction";
+            this.maxFunction.Size = new System.Drawing.Size(176, 26);
+            this.maxFunction.TabIndex = 23;
+            this.maxFunction.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.maxFunction.TextChanged += new System.EventHandler(this.textBox6_TextChanged);
             // 
             // panel1
             // 
@@ -343,8 +345,8 @@
             // panel3
             // 
             this.panel3.Controls.Add(this.label3);
-            this.panel3.Controls.Add(this.textBox3);
-            this.panel3.Controls.Add(this.solutionTextBox);
+            this.panel3.Controls.Add(this.IntersectionPoint);
+            this.panel3.Controls.Add(this.functionTextBox);
             this.panel3.Controls.Add(this.resultLabel);
             this.panel3.Location = new System.Drawing.Point(5, 261);
             this.panel3.Name = "panel3";
@@ -353,14 +355,21 @@
             // 
             // panel4
             // 
-            this.panel4.Controls.Add(this.textBox6);
-            this.panel4.Controls.Add(this.textBox5);
+            this.panel4.Controls.Add(this.maxFunction);
+            this.panel4.Controls.Add(this.minFunction);
             this.panel4.Controls.Add(this.label6);
             this.panel4.Controls.Add(this.label4);
             this.panel4.Location = new System.Drawing.Point(5, 341);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(522, 81);
             this.panel4.TabIndex = 27;
+            // 
+            // lSMToolStripMenuItem
+            // 
+            this.lSMToolStripMenuItem.Name = "lSMToolStripMenuItem";
+            this.lSMToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.lSMToolStripMenuItem.Text = "LSM";
+            this.lSMToolStripMenuItem.Click += new System.EventHandler(this.lSMToolStripMenuItem_Click);
             // 
             // Form1
             // 
@@ -404,12 +413,12 @@
         private System.Windows.Forms.Label epsilonLabel;
         private System.Windows.Forms.TextBox epsilonTextBox;
         private System.Windows.Forms.Label resultLabel;
-        private System.Windows.Forms.TextBox solutionTextBox;
+        private System.Windows.Forms.TextBox functionTextBox;
         private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem CalculateToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ClearMenuToolStripMenuItem;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox IntersectionPoint;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.Label label5;
@@ -418,8 +427,8 @@
         private System.Windows.Forms.ToolStripMenuItem calculateDecentToolStripMenuItem;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox minFunction;
+        private System.Windows.Forms.TextBox maxFunction;
         private System.Windows.Forms.ToolStripMenuItem calculateGoldenToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem otherTasksToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem integralToolStripMenuItem;
@@ -428,6 +437,7 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.ToolStripMenuItem lSMToolStripMenuItem;
     }
 }
 

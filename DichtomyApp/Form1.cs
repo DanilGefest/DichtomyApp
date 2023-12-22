@@ -38,10 +38,10 @@ namespace DichtomyApp
 
     private void ClearTextBox()
     {
-      solutionTextBox.Text = "";
-      textBox3.Text = "";
-      textBox5.Text = "";
-      textBox6.Text = "";
+      functionTextBox.Text = "";
+      IntersectionPoint.Text = "";
+      minFunction.Text = "";
+      maxFunction.Text = "";
     }
 
     private void setupFunction()
@@ -121,13 +121,13 @@ namespace DichtomyApp
             double RoundResult = fuction.StandartFunction((x1 + x2) / 2);
             if (RoundResult > 1 || RoundResult < -1)
             {
-                solutionTextBox.Text = "нет";
-                textBox3.Text = "Нет значений";
+                functionTextBox.Text = "нет";
+                IntersectionPoint.Text = "Нет значений";
             }
             else
             {
-                solutionTextBox.Text = Convert.ToString(Math.Round(RoundResult, AccuracyForView));
-                textBox3.Text = Convert.ToString(result);
+                functionTextBox.Text = Convert.ToString(Math.Round(RoundResult, AccuracyForView));
+                IntersectionPoint.Text = Convert.ToString(result);
             }
         }
 
@@ -149,22 +149,22 @@ namespace DichtomyApp
 
       if(x < a || x > b)
       {
-        solutionTextBox.Text = "нет";
-        textBox3.Text = "Нет значений";
+        functionTextBox.Text = "нет";
+        IntersectionPoint.Text = "Нет значений";
         MessageBox.Show("x = " + x + "     fx = " + fx);
         return;
       }
 
       if (fx > 1 || fx < -1)
       {
-        solutionTextBox.Text = "нет";
-        textBox3.Text = "Нет значений";
+        functionTextBox.Text = "нет";
+        IntersectionPoint.Text = "Нет значений";
         MessageBox.Show("x = " + x + "     fx = " + fx);
       }
       else
       {
-        solutionTextBox.Text = Convert.ToString(Math.Round(fx, AccuracyForView));
-        textBox3.Text = Convert.ToString(Math.Round(x, AccuracyForView));
+        functionTextBox.Text = Convert.ToString(Math.Round(fx, AccuracyForView));
+        IntersectionPoint.Text = Convert.ToString(Math.Round(x, AccuracyForView));
       }
     }
 
@@ -201,8 +201,8 @@ namespace DichtomyApp
       }
 
       double result = (start + end) / 2;
-      textBox3.Text = Convert.ToString(Math.Round(result, AccuracyForView));
-      solutionTextBox.Text = Convert.ToString(fuction.StandartFunction(result));
+      IntersectionPoint.Text = Convert.ToString(Math.Round(result, AccuracyForView));
+      functionTextBox.Text = Convert.ToString(fuction.StandartFunction(result));
     }
 
         private void GoldenMethodMinimum()
@@ -238,7 +238,7 @@ namespace DichtomyApp
       }
 
       double result = (start + end) / 2;
-      textBox5.Text = Convert.ToString(Math.Round(result, AccuracyForView));
+      minFunction.Text = Convert.ToString(Math.Round(result, AccuracyForView));
     }
 
         private void GoldenMethodMaximum()
@@ -274,7 +274,7 @@ namespace DichtomyApp
       }
 
       double result = (start + end) / 2;
-      textBox6.Text = Convert.ToString(Math.Round(result, AccuracyForView));
+      maxFunction.Text = Convert.ToString(Math.Round(result, AccuracyForView));
     }
 
         private void CoordinateDescent()
@@ -303,7 +303,7 @@ namespace DichtomyApp
             }
       double result = Math.Round(x, AccuracyForView);
 
-            textBox5.Text = result.ToString();
+            minFunction.Text = result.ToString();
         }
 
         private void CoordinateDescentNegative()
@@ -333,7 +333,7 @@ namespace DichtomyApp
       double result = Math.Round(x, AccuracyForView);
 
 
-      textBox6.Text = result.ToString();
+      maxFunction.Text = result.ToString();
         }
 
 
@@ -529,6 +529,13 @@ namespace DichtomyApp
             SLAE newForm1 = new SLAE(this);
             this.Hide();
             newForm1.Show();
+        }
+
+        private void lSMToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form4 newForm2 = new Form4(this);
+      this.Hide();
+      newForm2.Show();
         }
 
         private void epsilonTextBox_TextChanged(object sender, EventArgs e)
